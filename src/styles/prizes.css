@@ -23,6 +23,19 @@
   row-gap: 8vw;
 }
 
+.gradient__border-btn {
+  padding-inline: clamp(3rem, 5vw, 7rem);
+  padding-block: clamp(0.85rem, 2vh, 1.7rem);
+  position: relative;
+  margin-top: 2rem;
+  border-image-slice: 1;
+  border-width: 2.5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--clr-white);
+}
+
 /* 829px and below */
 @media screen and (max-width: 51.8125em) {
   .prizes__heading {
