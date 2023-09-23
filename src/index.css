@@ -37,7 +37,7 @@ body {
 
 #root {
   display: grid;
-  grid-template-rows: 15vh max-content repeat(9, min-content);
+  grid-template-rows: 15vh 85vh repeat(9, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) repeat(
       8,
