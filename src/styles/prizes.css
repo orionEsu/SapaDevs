@@ -1,0 +1,38 @@
+.prizes-section {
+  background-color: #110b20;
+  padding-block: 9rem;
+  position: relative;
+}
+
+.prizes__heading {
+  width: 50%;
+  margin-left: auto;
+  margin-bottom: 5vw;
+
+  & > p {
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+  }
+}
+
+.rewards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: 3rem;
+  justify-items: center;
+  row-gap: 8vw;
+}
+
+/* 829px and below */
+@media screen and (max-width: 51.8125em) {
+  .prizes__heading {
+    width: 100%;
+    text-align: center;
+    margin-inline: auto;
+
+    & > p {
+      width: min(100%, 39ch);
+      margin-inline: auto;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.timeline-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-block: 7rem;
+  position: relative;
+}
+
+.Timeline__header {
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.Timeline__header p {
+  text-wrap: balance;
+}
+
+.Timeline__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.Timeline__content::after {
+  background-color: var(--clr-purple);
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 0.4rem;
+  height: 97%;
+}
+
+.Timeline__item {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: 5rem 0;
+  margin: clamp(2rem, 2vh, 5rem) 0;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.Timeline__text,
+.Timeline__date {
+  width: 50%;
+}
+
+.Timeline__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.Timeline__item:nth-child(even) .Timeline__date {
+  text-align: right;
+  padding-right: 8.3rem;
+}
+
+.Timeline__item:nth-child(even) .Timeline__text {
+  padding-left: 8.3rem;
+}
+.Timeline__item:nth-child(odd) .Timeline__text {
+  text-align: right;
+  align-items: flex-end;
+  padding-right: 8.3rem;
+}
+.Timeline__item:nth-child(odd) .Timeline__date {
+  padding-left: 8.3rem;
+}
+
+.Timeline__item h3 {
+  font-size: 2.4rem;
+  padding: 1.2rem 0;
+}
+.Timeline__item p {
+  font-size: 1.6rem;
+}
+
+.circle {
+  position: absolute;
+  background: var(--clr-purple);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 6.8rem;
+  width: 100%;
+  aspect-ratio: 1/ 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 1.6rem;
+  border: 1.5rem solid var(--clr-darkBlue);
+}
+
+/* 1000px and below */
+@media screen and (max-width: 62.5em) {
+  .Timeline__item {
+    flex-direction: column;
+  }
+
+  .Timeline__item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .Timeline__item:nth-child(odd) .Timeline__text {
+    text-align: left;
+
+    padding-left: clamp(1rem, 15vw, 8.3rem);
+    padding-right: 4rem;
+  }
+
+  .Timeline__item:nth-child(even) .Timeline__text {
+    padding-left: clamp(1rem, 15vw, 8.3rem);
+    padding-right: clamp(1rem, 15vw, 8.3rem);
+    padding-right: 4rem;
+  }
+
+  .Timeline__item:nth-child(even) .Timeline__date {
+    text-align: left;
+    padding-left: clamp(1rem, 15vw, 8.3rem);
+    padding-right: 4rem;
+  }
+  .Timeline__item:nth-child(odd) .Timeline__date {
+    padding-left: clamp(1rem, 15vw, 8.3rem);
+    padding-right: 4rem;
+  }
+  .Timeline__text,
+  .Timeline__date {
+    width: 100%;
+  }
+
+  .Timeline__content::after {
+    left: 20px;
+  }
+
+  .circle {
+    left: 0;
+    top: 100%;
+    transform: translate(calc(-50% + 20px), -100%);
+    border-width: 0.75rem;
+  }
+
+  .Timeline__content::after {
+    height: 97%;
+  }
+}

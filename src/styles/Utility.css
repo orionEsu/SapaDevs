@@ -1,0 +1,78 @@
+.utility-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-block: 8rem;
+  position: relative;
+}
+
+.Utility__Component {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  align-items: center;
+  gap: clamp(5rem, 10vw, 10.6rem);
+  position: relative;
+}
+
+.Utility__Component article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Utility__Component article img {
+  align-self: center;
+}
+.Utility__Component button {
+  align-self: flex-start;
+}
+
+.Utility__Component article li {
+  margin-bottom: 2.7rem;
+}
+
+.big__idea_img {
+  max-width: clamp(30rem, 60vw, 53rem);
+}
+
+.rules__img {
+  max-width: clamp(40rem, 40vw, 66.4rem);
+  aspect-ratio: 1 / 1;
+}
+
+.judging__img {
+  max-width: clamp(42rem, 40vw, 71rem);
+}
+
+.judging--2 {
+  & > ul {
+    margin-top: 2.2rem;
+  }
+}
+
+.faq_img {
+  max-width: clamp(44rem, 40vw, 74rem);
+}
+
+.rules-section {
+  padding-block: 0 !important;
+}
+
+/* 850px and below*/
+@media screen and (max-width: 53.125em) {
+  .Utility__Component article {
+    align-items: center;
+  }
+  .Utility__Component button {
+    align-self: center;
+  }
+
+  .Utility__Component .small__text {
+    text-align: center;
+  }
+
+  .mobile__layout {
+    padding-bottom: 8rem;
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+}

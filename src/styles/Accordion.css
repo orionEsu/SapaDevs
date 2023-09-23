@@ -1,0 +1,41 @@
+.Accordion__Component {
+  margin-top: 6.8rem;
+  cursor: pointer;
+}
+.Accordion__header {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr-purple);
+  padding: 1.3rem 0;
+  margin-right: clamp(2rem, 5vw, 5rem);
+}
+
+.Accordion__header span {
+  font-size: 2rem;
+}
+
+.Accordion__content {
+  overflow: hidden;
+  height: 0;
+}
+
+.open .Accordion__header {
+  border-color: var(--clr-white);
+}
+
+.open .Accordion__content {
+  color: var(--clr-purple);
+}
+
+.open .Accordion__content {
+  height: auto;
+}
+
+/* 850px and under */
+@media screen and (max-width: 53.125em) {
+  .Accordion__header {
+    margin-right: 0;
+    text-align: left;
+  }
+}

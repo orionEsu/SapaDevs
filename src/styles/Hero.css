@@ -1,0 +1,124 @@
+main {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Hero__section {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  height: 100%;
+  overflow: hidden;
+}
+
+.Hero__text {
+  display: grid;
+
+  margin-top: clamp(1rem, 20vh, 15rem);
+  justify-items: baseline;
+}
+
+.Hero__text h1 {
+  font-size: clamp(2.5rem, 4.5vw, 8rem);
+  line-height: 1.2;
+}
+
+.Hero__text h1 p {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 2vw, 1.5rem);
+}
+
+.hero__sub {
+  text-wrap: balance;
+}
+
+.bulb__img {
+  max-width: clamp(1.4rem, 3vw, 5.3rem);
+  max-height: clamp(1.4rem, 5vh, 7.3rem);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, -100%);
+}
+
+.chain__img {
+  max-width: clamp(4rem, 5vw, 8.3rem);
+  aspect-ratio: 1/1;
+}
+
+.fire__img {
+  max-width: clamp(3rem, 5vw, 5.3rem);
+  aspect-ratio: 1/1;
+  margin-left: -1.5rem;
+}
+
+.floating__text {
+  position: absolute;
+  top: clamp(1rem, 1.5vh, 3.2rem);
+  right: clamp(2rem, 5vw, 5.5rem);
+  font-size: clamp(1.6rem, 2vw, 3.2rem);
+  font-style: italic;
+}
+
+.floating__text img {
+  width: 30%;
+  position: absolute;
+  bottom: -10px;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.Hero__section .heading--title {
+  text-wrap: balance;
+}
+
+.sub__text {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: clamp(2.05rem, 3.25vw, 4.1rem);
+}
+
+.Hero__image {
+  align-self: flex-end;
+}
+
+/* 850px and below*/
+@media screen and (max-width: 53.125em) {
+  .Hero__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .Hero__section {
+    padding: clamp(2.5rem, 7.5vh, 15rem) 0 0 0;
+  }
+
+  .Hero__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Hero__text h1 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  .floating__text {
+    top: 1.2rem;
+    right: 0rem;
+  }
+
+  .fire__img {
+    max-width: clamp(3rem, 5vw, 5.3rem);
+    aspect-ratio: 1/1;
+    margin-left: -0.5rem;
+  }
+}
