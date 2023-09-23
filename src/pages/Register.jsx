@@ -129,7 +129,7 @@ export default function Register() {
       </div>
       <section>
         <div className="container register-section">
-          <ScrollTriggerWrapper startPer="100" className="register__image">
+          <ScrollTriggerWrapper startPer="120" className="register__image">
             <h2 className="heading-2 primary__col_util heading-hidden">
               Register
             </h2>
