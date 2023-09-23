@@ -1,5 +1,5 @@
 import "../styles/footer.css";
-import LogoImage from "../assets/svgs/Logo.webp";
+import LogoImage from "../assets/svgs/logo.webp";
 import ScrollTriggerWrapper from "./ScrollTriggerWrapper";
 import XIcon from "../assets/svgs/x.svg";
 import CallIcon from "../assets/svgs/call-icon.svg";
