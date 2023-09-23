@@ -121,248 +121,181 @@ export default function Contact() {
   };
 
   return (
-		<>
-			<div className='contact__header'>
-				<Nav />
-				<div
-					onClick={() => navigate('/')}
-					className='back__home'
-				>
-					<img
-						src={BackHomeIcon}
-						alt=''
-					/>
-				</div>
-			</div>
-			<section>
-				<div className='contact__section container'>
-					<ScrollTriggerWrapper className='animated'>
-						<div className='contact__text'>
-							<h2 className='heading-2  primary__col_util'>
-								Get in Touch
-							</h2>
-							<p>
-								<strong>
-									Contact <br />
-									Information
-								</strong>
-							</p>
-							<ul>
-								<li>27,Alara Street </li>
-								<li>Yaba 100012 </li>
-								<li>Lagos State</li>
-							</ul>
-							<p>
-								Call Us : <strong>07067981819</strong>
-							</p>
-							<p>
-								We are open from{' '}
-								<strong>Monday - Friday</strong> <br /> 08:00am
-								- 05:00pm
-							</p>
-							<div className='contact__socials'>
-								<p className='primary__col_util'>Share on</p>
-								<ul>
-									<a
-										href='https://www.instagram.com/getlinked.ai/'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<img
-											src={InstagramIcon}
-											alt='IG Icon'
-										/>
-									</a>
+    <>
+      <div className="contact__header">
+        <Nav />
+        <div onClick={() => navigate("/")} className="back__home">
+          <img src={BackHomeIcon} alt="" />
+        </div>
+      </div>
+      <section>
+        <div className="contact__section container">
+          <ScrollTriggerWrapper className="animated">
+            <div className="contact__text">
+              <h2 className="heading-2  primary__col_util">Get in Touch</h2>
+              <p>
+                <strong>
+                  Contact <br />
+                  Information
+                </strong>
+              </p>
+              <ul>
+                <li>27,Alara Street </li>
+                <li>Yaba 100012 </li>
+                <li>Lagos State</li>
+              </ul>
+              <p>
+                Call Us : <strong>07067981819</strong>
+              </p>
+              <p>
+                We are open from <strong>Monday - Friday</strong> <br /> 08:00am
+                - 05:00pm
+              </p>
+              <div className="contact__socials">
+                <p className="primary__col_util">Share on</p>
+                <ul>
+                  <a
+                    href="https://www.instagram.com/getlinked.ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={InstagramIcon} alt="IG Icon" />
+                  </a>
 
-									<a
-										href='https://twitter.com/getLinkedai'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<img
-											src={XIcon}
-											alt='X Icon'
-										/>
-									</a>
+                  <a
+                    href="https://twitter.com/getLinkedai"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={XIcon} alt="X Icon" />
+                  </a>
 
-									<a
-										href='https://web.facebook.com/getLinkedai'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<img
-											src={FacebookIcon}
-											alt='Facebook Icon'
-										/>
-									</a>
+                  <a
+                    href="https://web.facebook.com/getLinkedai"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={FacebookIcon} alt="Facebook Icon" />
+                  </a>
 
-									<a
-										href='https://www.linkedin.com/company/getlinked-ai/'
-										target='_blank'
-										rel='noreferrer'
-									>
-										<img
-											src={LinkedinIcon}
-											alt='LinkedIn Icon'
-										/>
-									</a>
-								</ul>
-							</div>
-						</div>
-					</ScrollTriggerWrapper>
+                  <a
+                    href="https://www.linkedin.com/company/getlinked-ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={LinkedinIcon} alt="LinkedIn Icon" />
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </ScrollTriggerWrapper>
 
-					<div className='contact__form-area'>
-						<ScrollTriggerWrapper direction='right'>
-							<h2 className='heading--title  primary__col_util'>
-								<p>Questions or need assitance?</p>
-								<p>Let us know about it!</p>
-							</h2>
-							<p className='mobile__message'>
-								Email us below for any questions related to our
-								event
-							</p>
-							<form
-								className='contact__form'
-								onSubmit={handleSubmit}
-							>
-								<label htmlFor='Name'>
-									<input
-										type='text'
-										placeholder='First name'
-										value={formData.first_name}
-										onChange={handleChange}
-										required
-										name='first_name'
-									/>
-									{formErrors.first_name && (
-										<p className='error__text '>
-											{formErrors.first_name}
-										</p>
-									)}
-								</label>
-								<label htmlFor='Email'>
-									<input
-										type='email'
-										placeholder='Email'
-										value={formData.email}
-										onChange={handleChange}
-										required
-										name='email'
-									/>
-									{formErrors.email && (
-										<p className='error__text '>
-											{formErrors.email}
-										</p>
-									)}
-								</label>
-								<label htmlFor='Message'>
-									<textarea
-										name='message'
-										id='Message'
-										cols='30'
-										rows='7'
-										placeholder='Message'
-										value={formData.message}
-										onChange={handleChange}
-										required
-									></textarea>
-									{formErrors.message && (
-										<p className='error__text '>
-											{formErrors.message}
-										</p>
-									)}
-								</label>
-								<ActionButton
-									BtnContent={'Submit'}
-									type='submit'
-								/>
-								{isLoading && (
-									<p style={{ textAlign: 'center' }}>
-										Loading...
-									</p>
-								)}
-								<div className='contact__socials form__socials'>
-									<p className='primary__col_util'>
-										Share on
-									</p>
-									<ul>
-										<a
-											href='https://www.instagram.com/getlinked.ai/'
-											target='_blank'
-											rel='noreferrer'
-										>
-											<img
-												src={InstagramIcon}
-												alt='IG Icon'
-											/>
-										</a>
+          <div className="contact__form-area">
+            <ScrollTriggerWrapper direction="right">
+              <div className="contact__container">
+                <h2 className="heading--title  primary__col_util">
+                  <p>Questions or need assitance?</p>
+                  <p>Let us know about it!</p>
+                </h2>
+                <p className="mobile__message">
+                  Email us below for any questions related to our event
+                </p>
+                <form className="contact__form" onSubmit={handleSubmit}>
+                  <label htmlFor="Name">
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      value={formData.first_name}
+                      onChange={handleChange}
+                      required
+                      name="first_name"
+                    />
+                    {formErrors.first_name && (
+                      <p className="error__text ">{formErrors.first_name}</p>
+                    )}
+                  </label>
+                  <label htmlFor="Email">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      name="email"
+                    />
+                    {formErrors.email && (
+                      <p className="error__text ">{formErrors.email}</p>
+                    )}
+                  </label>
+                  <label htmlFor="Message">
+                    <textarea
+                      name="message"
+                      id="Message"
+                      cols="30"
+                      rows="7"
+                      placeholder="Message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                    {formErrors.message && (
+                      <p className="error__text ">{formErrors.message}</p>
+                    )}
+                  </label>
+                  <ActionButton BtnContent={"Submit"} type="submit" />
+                  {isLoading && (
+                    <p style={{ textAlign: "center" }}>Loading...</p>
+                  )}
+                  <div className="contact__socials form__socials">
+                    <p className="primary__col_util">Share on</p>
+                    <ul>
+                      <a
+                        href="https://www.instagram.com/getlinked.ai/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img src={InstagramIcon} alt="IG Icon" />
+                      </a>
 
-										<a
-											href='https://twitter.com/getLinkedai'
-											target='_blank'
-											rel='noreferrer'
-										>
-											<img
-												src={XIcon}
-												alt='X Icon'
-											/>
-										</a>
+                      <a
+                        href="https://twitter.com/getLinkedai"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img src={XIcon} alt="X Icon" />
+                      </a>
 
-										<a
-											href='https://web.facebook.com/getLinkedai'
-											target='_blank'
-											rel='noreferrer'
-										>
-											<img
-												src={FacebookIcon}
-												alt='Facebook Icon'
-											/>
-										</a>
+                      <a
+                        href="https://web.facebook.com/getLinkedai"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img src={FacebookIcon} alt="Facebook Icon" />
+                      </a>
 
-										<a
-											href='https://www.linkedin.com/company/getlinked-ai/'
-											target='_blank'
-											rel='noreferrer'
-										>
-											<img
-												src={LinkedinIcon}
-												alt='LinkedIn Icon'
-											/>
-										</a>
-									</ul>
-								</div>
-							</form>
-						</ScrollTriggerWrapper>
-					</div>
-					<Star
-						color='purple'
-						top={15}
-						left={5}
-					/>
-					<Star
-						color='purple'
-						top={70}
-						left={30}
-					/>
-					<Star
-						color='gray'
-						top={20}
-						left={70}
-					/>
-					<Star
-						color='white'
-						top={80}
-						left={80}
-					/>
-				</div>
-			</section>
+                      <a
+                        href="https://www.linkedin.com/company/getlinked-ai/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img src={LinkedinIcon} alt="LinkedIn Icon" />
+                      </a>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </ScrollTriggerWrapper>
+          </div>
+          <Star color="purple" top={15} left={5} />
+          <Star color="purple" top={70} left={30} />
+          <Star color="gray" top={20} left={70} />
+          <Star color="white" top={80} left={80} />
+        </div>
+      </section>
 
-			{modalStatus && (
-				<Modal
-					status={modalStatus}
-					setModalStatus={setModalStatus}
-				/>
-			)}
-		</>
+      {modalStatus && (
+        <Modal status={modalStatus} setModalStatus={setModalStatus} />
+      )}
+    </>
   );
 }

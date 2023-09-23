@@ -13,6 +13,10 @@
   flex: 1;
 }
 
+.contact__text {
+  padding: clamp(2rem, 8vw, 5rem);
+}
+
 .contact__text,
 .contact__form-area {
   display: flex;
@@ -21,11 +25,15 @@
   gap: 1.7rem;
 
   flex: 1;
+}
+
+.contact__container {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
   padding: clamp(2rem, 8vw, 5rem);
 }
 
 .contact__form-area {
-  background: rgba(255, 255, 255, 0.025);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border-radius: 10px;
